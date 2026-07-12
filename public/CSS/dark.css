@@ -1,0 +1,111 @@
+/* ==========================
+   Dark Theme
+========================== */
+
+body {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Header */
+header {
+    background: #111111;
+}
+
+.logo,
+nav a,
+.header-right span {
+    color: white;
+}
+
+.header-right input {
+    background: #2d2d2d;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Statistics Card */
+.stat-card {
+    background: #2b2b2b;
+    color: white;
+}
+
+.stat-card h3,
+.stat-card p {
+    color: white;
+}
+
+/* Book Cards */
+.book-card {
+    background: #2b2b2b;
+    color: white;
+}
+
+.book-info p {
+    color: #dddddd;
+}
+
+.category {
+    background: #444;
+    color: white;
+}
+
+/* Table */
+
+table {
+    background: #242424;
+    color: white;
+}
+
+thead {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+th,
+td {
+    color: white;
+}
+
+/* Override products.css */
+
+tbody tr {
+    background: #242424 !important;
+}
+
+tbody tr:nth-child(odd) {
+    background: #242424 !important;
+}
+
+tbody tr:nth-child(even) {
+    background: #2e2e2e !important;
+}
+
+tbody tr:hover {
+    background: #3a3a3a !important;
+}
+
+/* Form */
+
+.form-container {
+    background: #2b2b2b;
+    color: white;
+}
+
+.form-container h2,
+.form-group label {
+    color: white;
+}
+
+.form-group input,
+.form-group select {
+    background: #3b3b3b;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Footer */
+
+footer {
+    background: #111;
+    color: white;
+}

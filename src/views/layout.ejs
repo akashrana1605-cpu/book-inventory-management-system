@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/products.css">
+    <link rel="stylesheet" href="/CSS/headers.css">
+
+    <!-- Theme CSS -->
+    <% if (theme==="dark" ) { %>
+        <link rel="stylesheet" href="/CSS/dark.css">
+        <% } else { %>
+            <link rel="stylesheet" href="/CSS/light.css">
+            <% } %>
+
+                <!-- Bootstrap -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            📚 Book Inventory
+        </div>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="/">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="/new">Add Product</a>
+                </li>
+
+                <li>
+                    <a href="/toggleTheme">
+                        <% if (theme==="dark" ) { %>
+                            ☀ Light Mode
+                            <% } else { %>
+                                🌙 Dark Mode
+                                <% } %>
+                    </a>
+                </li>
+
+                <% if (session && session.userEmail) { %>
+
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+
+                    <% } else { %>
+
+                        <li>
+                            <a href="/register">Register</a>
+                        </li>
+
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+
+                        <% } %>
+
+            </ul>
+        </nav>
+
+        <div class="header-right">
+
+            <input type="text" placeholder="Search books...">
+
+            <% if (session && session.userEmail) { %>
+
+                <span class="text-white me-3">
+                    Welcome, <%= session.userEmail %>
+                </span>
+
+                <% } %>
+
+                    <img src="https://i.pravatar.cc/50" alt="Profile" class="avatar">
+
+        </div>
+
+    </header>
+
+    <!-- Dynamic Page Content -->
+    <%- body %>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Book Inventory Dashboard</p>
+        </footer>
+
+        <script src="/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

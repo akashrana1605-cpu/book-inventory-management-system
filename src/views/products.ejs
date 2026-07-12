@@ -1,0 +1,100 @@
+<% if(locals.lastVisit){ %>
+<div class="alert alert-primary" role="alert">
+    your last visit was on : <%= locals.lastVisit %>
+</div>
+<% } %>
+
+<main>
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>Total Books</h3>
+            <p>
+                <%= products.length %>
+            </p>
+        </div>
+
+    </section>
+
+    <section class="table-section">
+
+        <h2>Inventory Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% products.forEach(product=>{ %>
+
+                    <tr>
+
+                        <td>
+                            <%= product.id %>
+                        </td>
+
+                        <td>
+                            <%= product.name %>
+                        </td>
+
+                        <td>
+                            <%= product.desc %>
+                        </td>
+
+                        <td>
+                            <%= product.price %>
+                        </td>
+
+                        <td>
+
+                            <img src="<%= product.imageUrl %>" width="80">
+
+                        </td>
+
+                        <td>
+
+                            <a href="/update-product/<%= product.id %>" class="btn btn-warning">
+
+                                Update
+
+                            </a>
+
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-danger" onclick="deleteProduct('<%= product.id %>')">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
