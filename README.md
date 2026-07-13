@@ -26,6 +26,8 @@ A simple Book Inventory Management System built using **Node.js, Express.js, EJS
 
 ## ▶️ Run Locally
 
+** important : You have to register with random details and then login
+
 ```bash
 git clone https://github.com/akashrana1605-cpu/book-inventory-management-system.git
 cd book-inventory-management-system
